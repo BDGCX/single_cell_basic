@@ -1,0 +1,82 @@
+SOURCE	TARGET	count
+Memory CD4 T	Memory CD4 T	3
+Memory CD4 T	NK	2
+Memory CD4 T	FCGR3A+ Mono	7
+Memory CD4 T	Naive CD4 T	2
+Memory CD4 T	CD14+ Mono	3
+Memory CD4 T	B	4
+Memory CD4 T	DC	6
+Memory CD4 T	CD8 T	2
+Memory CD4 T	Platelet	1
+NK	Memory CD4 T	2
+NK	NK	0
+NK	FCGR3A+ Mono	4
+NK	Naive CD4 T	1
+NK	CD14+ Mono	3
+NK	B	2
+NK	DC	5
+NK	CD8 T	1
+NK	Platelet	0
+FCGR3A+ Mono	Memory CD4 T	7
+FCGR3A+ Mono	NK	4
+FCGR3A+ Mono	FCGR3A+ Mono	7
+FCGR3A+ Mono	Naive CD4 T	3
+FCGR3A+ Mono	CD14+ Mono	7
+FCGR3A+ Mono	B	6
+FCGR3A+ Mono	DC	12
+FCGR3A+ Mono	CD8 T	4
+FCGR3A+ Mono	Platelet	5
+Naive CD4 T	Memory CD4 T	2
+Naive CD4 T	NK	1
+Naive CD4 T	FCGR3A+ Mono	3
+Naive CD4 T	Naive CD4 T	1
+Naive CD4 T	CD14+ Mono	0
+Naive CD4 T	B	2
+Naive CD4 T	DC	3
+Naive CD4 T	CD8 T	2
+Naive CD4 T	Platelet	0
+CD14+ Mono	Memory CD4 T	3
+CD14+ Mono	NK	3
+CD14+ Mono	FCGR3A+ Mono	7
+CD14+ Mono	Naive CD4 T	0
+CD14+ Mono	CD14+ Mono	1
+CD14+ Mono	B	2
+CD14+ Mono	DC	8
+CD14+ Mono	CD8 T	2
+CD14+ Mono	Platelet	1
+B	Memory CD4 T	4
+B	NK	2
+B	FCGR3A+ Mono	6
+B	Naive CD4 T	2
+B	CD14+ Mono	2
+B	B	1
+B	DC	5
+B	CD8 T	3
+B	Platelet	2
+DC	Memory CD4 T	6
+DC	NK	5
+DC	FCGR3A+ Mono	12
+DC	Naive CD4 T	3
+DC	CD14+ Mono	8
+DC	B	5
+DC	DC	6
+DC	CD8 T	5
+DC	Platelet	6
+CD8 T	Memory CD4 T	2
+CD8 T	NK	1
+CD8 T	FCGR3A+ Mono	4
+CD8 T	Naive CD4 T	2
+CD8 T	CD14+ Mono	2
+CD8 T	B	3
+CD8 T	DC	5
+CD8 T	CD8 T	1
+CD8 T	Platelet	0
+Platelet	Memory CD4 T	1
+Platelet	NK	0
+Platelet	FCGR3A+ Mono	5
+Platelet	Naive CD4 T	0
+Platelet	CD14+ Mono	1
+Platelet	B	2
+Platelet	DC	6
+Platelet	CD8 T	0
+Platelet	Platelet	0

@@ -25,7 +25,7 @@ library(dplyr)
 # https://cf.10xgenomics.com/samples/cell/pbmc3k/pbmc3k_filtered_gene_bc_matrices.tar.gz
 pbmc.data <- Read10X(data.dir = "filtered_gene_bc_matrices/hg19/")
 # Initialize the Seurat object with the raw (non-normalized data).
-
+#barcode是细胞名字，gene是基因名字，matrix是表达量矩阵
 pbmc <- CreateSeuratObject(counts = pbmc.data, project = "pbmc3k",
                            min.cells = 3, min.features = 200)
 pbmc
@@ -45,7 +45,7 @@ top10 <- head(VariableFeatures(pbmc), 10)
 # plot variable features with and without labels
 plot1 <- VariableFeaturePlot(pbmc)
 plot2 <- LabelPoints(plot = plot1, points = top10, repel = TRUE)
-plot1 + plot2
+plot1 + plot2#图太大显示不出来报错，可以直接储存到pdf或图片格式
 pbmc <- ScaleData(pbmc, vars.to.regress = "percent.mt")
 pbmc <- RunPCA(pbmc, features = VariableFeatures(object = pbmc))  
 # 

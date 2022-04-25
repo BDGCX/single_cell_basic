@@ -35,6 +35,8 @@ gene <- bitr(rownames(nrDEG),     #转换的列是nrDEG的列名
              OrgDb = org.Hs.eg.db)    #对应的物种，小鼠的是org.Mm.eg.db
 #让基因名、ENTREZID、logFC对应起来
 gene$logFC <- nrDEG$log2FoldChange[match(gene$SYMBOL,rownames(nrDEG))]
+#match返回第一个向量中的元素在第二个向量中的位置坐标
+#match(c(1, "TRUE"), c(T, 0, "1"))
 head(gene)
 geneList=gene$logFC
 names(geneList)=gene$ENTREZID 

@@ -63,7 +63,7 @@ markers_df <- FindMarkers(object = sce,
                           min.pct = 0.25)
 head(markers_df)
 # 在seurat V4里面， 是 avg_log2FC ， 但是如果是V3版本包，仍然是 avg_logFC
-cg_markers_df=markers_df[abs(markers_df$avg_logFC) >1,]
+cg_markers_df=markers_df[abs(markers_df$avg_log2FC) >1,]
 dim(cg_markers_df)
 DoHeatmap(subset(sce, downsample = 15),
           slot = 'counts',
@@ -74,10 +74,12 @@ intersect( rownames(cg_markers_df) ,
 
 
 # drop-out
+#想自己划分一个亚群，例如某个基因高表达是一个亚群
 highCells= colnames(subset(x = sce, subset = FCGR3A > 1,
                            slot = 'counts')) 
 highORlow=ifelse(colnames(sce) %in% highCells,'high','low')
 table(highORlow)
+table(sce.markers$cluster)
 table(Idents(sce))
 table(Idents(sce),highORlow)
 sce@meta.data$highORlow=highORlow
@@ -87,7 +89,7 @@ markers <- FindMarkers(sce, ident.1 = "high",
                        group.by = 'highORlow' )
 head(x = markers)
 # 在seurat V4里面， 是 avg_log2FC ， 但是如果是V3版本包，仍然是 avg_logFC
-cg_markers=markers[abs(markers$avg_logFC) >1,]
+cg_markers=markers[abs(markers$avg_log2FC) >1,]
 dim(cg_markers)
 DoHeatmap(subset(sce, downsample = 15),
           rownames(cg_markers) ,

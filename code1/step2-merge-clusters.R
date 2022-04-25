@@ -38,14 +38,14 @@ DotPlot(sce, group.by = 'seurat_clusters',
 
 
 # 参考：https://mp.weixin.qq.com/s/YYJWbluM86rp9y4CNHBKpQ 
-
+# method 1
 Idents(sce)
 levels(sce)
 head(sce@meta.data)
 #  method : 1 
 new.cluster.ids <- c("T", "Mono", "T", 
                      "B", "T", "Mono",
-                     "T", "DC", "Platelet")
+                     "T", "DC", "Platelet")#将想要合并的细胞群取相同名字
 names(new.cluster.ids) <- levels(sce)
 sce <- RenameIdents(sce, new.cluster.ids)
 DimPlot(sce, reduction = 'umap', 
@@ -66,7 +66,7 @@ sce[['cell_type']] = unname(cluster2celltype[sce@meta.data$seurat_clusters])
 DimPlot(sce, reduction = 'umap', group.by = 'cell_type',
         label = TRUE, pt.size = 0.5) + NoLegend()
 
-
+#method3
 # 一个数据框 
 (n=length(unique(sce@meta.data$seurat_clusters)))
 celltype=data.frame(ClusterID=0:(n-1),
